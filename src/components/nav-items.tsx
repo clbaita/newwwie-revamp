@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const NavItems = () => {
   return (
@@ -16,7 +16,7 @@ const NavItems = () => {
         <Link href="/invite">Invite</Link>
       </li>
     </>
-  );
-};
+  )
+}
 
-export default NavItems;
+export default NavItems

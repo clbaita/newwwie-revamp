@@ -1,7 +1,7 @@
 export interface NewwwieLogoProps {
-  width?: string;
-  height?: string;
-  className?: string;
+  width?: string
+  height?: string
+  className?: string
 }
 
 export const NewwwieLogo = (props: NewwwieLogoProps) => {
@@ -73,5 +73,5 @@ export const NewwwieLogo = (props: NewwwieLogoProps) => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}
