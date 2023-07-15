@@ -12,18 +12,18 @@ const App = ({ Component, pageProps }: AppProps) => {
         <title>
           Newie | an open community of digital creators in newcastle nsw.
         </title>
-        <meta property="og:title" content="My page title" key="title" />
+        <meta property="og:title" content="Newie | an open community of digital creators in newcastle nsw." key="title" />
         <meta
           property="og:description"
           content="An open community of digital creators in newcastle nsw."
         />
       </Head>
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <input id="main-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <div className="w-full navbar bg-base-300">
           <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
+            <label htmlFor="main-drawer" className="btn btn-square btn-ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -60,7 +60,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         </main>
       </div>
       <div className="drawer-side">
-        <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
+        <label htmlFor="main-drawer" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-base-200">
           {/* Sidebar content here */}
           <NavItems />
