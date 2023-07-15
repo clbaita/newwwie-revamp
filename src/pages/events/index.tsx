@@ -17,7 +17,7 @@ const Events = ({ events }: EventProps) => {
         {events.map((e, i) => {
           const { event, group } = e
           return (
-            <div className="card w-72 bg-base-300 shadow-xl my-6 mx-6" key={i}>
+            <div className="card w-72 bg-base-200 shadow-xl my-6 mx-6" key={i}>
               <figure>
                 <Image
                   src={event.imageUrl}

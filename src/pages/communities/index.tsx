@@ -12,7 +12,7 @@ const Communities = () => {
       </p>
       {communities.map((c: CommunityItem, i) => {
         return (
-          <div className="card bg-base-300 my-12" key={i}>
+          <div className="card bg-base-200 my-12" key={i}>
             <div className="card-body">
               <h2 className="card-title justify-center">
                 <a className="underline" href={c.title.url}>

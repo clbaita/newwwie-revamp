@@ -22,7 +22,7 @@ const Invite = () => {
         </p>
       </div>
       <div className="card flex-shrink-0 w-full max-w-2xl shadow-2xl bg-base-100 mx-auto">
-        <div className="card-body bg-base-200">
+        <div className="card-body bg-base-200 rounded-lg">
           <form>
             <div className="form-control">
               <label className="label">
@@ -90,7 +90,7 @@ const Invite = () => {
             </div>
             <div className="form-control mt-6">
               <button type="submit" className="btn btn-primary">
-                Login
+                Get an invite!
               </button>
             </div>
           </form>
