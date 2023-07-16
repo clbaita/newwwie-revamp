@@ -7,72 +7,67 @@ import Head from "next/head"
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <div className="drawer">
+    <div>
       <Head>
         <title>
           Newie | an open community of digital creators in newcastle nsw.
         </title>
-        <meta property="og:title" content="Newie | an open community of digital creators in newcastle nsw." key="title" />
+        <meta
+          property="og:title"
+          content="Newie | an open community of digital creators in newcastle nsw."
+          key="title"
+        />
         <meta
           property="og:description"
           content="An open community of digital creators in newcastle nsw."
         />
       </Head>
-      <input id="main-drawer" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col">
-        {/* Navbar */}
-        <div className="w-full navbar bg-base-300">
-          <div className="flex-none lg:hidden">
-            <label htmlFor="main-drawer" className="btn btn-square btn-ghost">
+      <div className="navbar bg-base-300 sticky top-0 z-50">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
+                stroke="currentColor"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
               </svg>
             </label>
-          </div>
-          <div className="flex-1 px-2 mx-2">
-            <Link
-              href="/"
-              className="group rounded-lg transition-colors hover:bg-base-content/10"
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-300 rounded-box w-52"
             >
-              <NewwwieLogo width={"120"} height={"60"} />
-            </Link>
-          </div>
-          <div className="flex-none hidden lg:block">
-            <ul className="menu menu-horizontal">
-              {/* Navbar menu content here */}
               <NavItems />
             </ul>
           </div>
+          <Link href="/" className="btn-ghost rounded-lg">
+            <NewwwieLogo width={"120"} height={"60"} />
+          </Link>
         </div>
-        {/* Page content here */}
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          <Component {...pageProps} />
-        </main>
+        <div className="navbar-end hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <NavItems />
+          </ul>
+        </div>
       </div>
-      <div className="drawer-side">
-        <label htmlFor="main-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full bg-base-200">
-          {/* Sidebar content here */}
-          <NavItems />
-        </ul>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-16 flex justify-center">
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <Component {...pageProps} />
+      </main>
+      <div className="bottom-0 h-16 flex justify-center">
         <div className="px-4">© 2023</div>
         <div className="px-4">
           <Link
             href="https://github.com/newwwie/Code-Of-Conduct/blob/master/README.md"
             rel="external"
-            className="underline"
+            className="link"
           >
             Code of conduct
           </Link>
@@ -80,7 +75,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <div className="px-4">
           <Link
             href="https://github.com/newwwie/newwwie.com"
-            className="underline"
+            className="link"
             rel="external"
           >
             Edit on Github

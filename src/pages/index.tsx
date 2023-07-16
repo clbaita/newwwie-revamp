@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { NewwwieLogo } from "../components/newwwie-logo"
+import Link from "next/link"
 
 const Home = () => {
   return (
@@ -15,9 +16,9 @@ const Home = () => {
       </p>
       <p className="pt-12">
         To be a part of the conversation with 1k locals. We use a{" "}
-        <a className="underline" href="https://slack.com">
+        <Link className="link" href="https://slack.com">
           slack
-        </a>{" "}
+        </Link>{" "}
         channel.
       </p>
     </div>

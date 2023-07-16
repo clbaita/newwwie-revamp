@@ -1,4 +1,9 @@
-import { communities, Link, CommunityItem } from "../../community-list"
+import Link from "next/link"
+import {
+  communities,
+  Link as LinkType,
+  CommunityItem,
+} from "../../community-list"
 
 const Communities = () => {
   return (
@@ -15,19 +20,19 @@ const Communities = () => {
           <div className="card bg-base-200 my-12" key={i}>
             <div className="card-body">
               <h2 className="card-title justify-center">
-                <a className="underline" href={c.title.url}>
+                <Link className="link" href={c.title.url}>
                   {c.title.text}
-                </a>
+                </Link>
               </h2>
               <div className="text-left pt-4">
                 <p className="font-bold">Links :</p>
                 <ul className="list-disc pl-8 pb-6">
-                  {c.links.map((l: Link, i) => {
+                  {c.links.map((l: LinkType, i) => {
                     return (
                       <li key={i}>
-                        <a className="underline" href={l.url}>
+                        <Link className="link" href={l.url}>
                           {l.text}
-                        </a>
+                        </Link>
                       </li>
                     )
                   })}

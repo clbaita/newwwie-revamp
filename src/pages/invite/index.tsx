@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const Invite = () => {
   return (
     <div className="text-center">
@@ -11,12 +13,12 @@ const Invite = () => {
         </p>
         <p className="py-6">
           You should familiarise yourself with our{" "}
-          <a
-            className="underline"
+          <Link
+            className="link"
             href="https://github.com/newwwie/Code-Of-Conduct/blob/master/README.md"
           >
             code of conduct
-          </a>{" "}
+          </Link>{" "}
           before joining to ensure you understand what is expected so that
           everyone feels welcome.
         </p>

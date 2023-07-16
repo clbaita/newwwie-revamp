@@ -27,8 +27,10 @@ const Events = ({ events }: EventProps) => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{event.title}</h2>
-                <p className="text-sm italic underline">
+                <h2 className="card-title">
+                  <Link href={event.eventUrl}>{event.title}</Link>
+                </h2>
+                <p className="text-sm italic link link-hover">
                   <Link href={`https://meetup.com/${group.urlname}`}>
                     Hosted by {group.name}
                   </Link>
@@ -37,9 +39,9 @@ const Events = ({ events }: EventProps) => {
                   {new Date(event.dateTime).toLocaleString("en-AU")}
                 </p>
                 <div className="card-actions justify-end">
-                  <a href={event.eventUrl}>
+                  <Link href={event.eventUrl}>
                     <button className="btn btn-primary">More Info</button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

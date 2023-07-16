@@ -18,7 +18,7 @@ const About = () => {
       </p>
       <p className="pt-12">
         If this sounds like something you would like to checkout, request an{" "}
-        <Link className="underline" href="/invite">
+        <Link className="link" href="/invite">
           invite
         </Link>
         .
