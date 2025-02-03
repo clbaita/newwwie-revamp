@@ -1,0 +1,33 @@
+name: Audit and Upload Artifact
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # This allows you to manually trigger the workflow
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run npm audit report
+        run: npm audit report --json > audit-report.json
+
+      - name: Upload Audit Report Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: audit-report
+          path: audit-report.json
